@@ -10,5 +10,8 @@ contact.addEventListener("submit", (e) => {
         alert("Please fill in your name, email address and the message")
     }else{
         alert("Thanks")
+        document.getElementById('name').value = ""
+        document.getElementById('email').value = ""
+        document.getElementById("message").value = ""
     }
 })
