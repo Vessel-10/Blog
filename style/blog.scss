@@ -221,7 +221,8 @@ $sidebar-width:30%;
     }
 }
 
-@media (max-width:767px){
+// extra smaller devices 
+@media (max-width:480px){
     .header{
         display: none;
     }
@@ -256,9 +257,43 @@ $sidebar-width:30%;
                                 @include fonts(1.6em, "Inter", bold);
                                 padding: 5px 0;
                             }
+                            h2:nth-child(2){
+                                @include fonts(1.2em, "Literata", bold);
+                                text-transform: capitalize;
+                            }
+                            p{
+                                @include fonts(14px, "Inter");
+                                &::first-letter{
+                                    text-transform: uppercase;
+                                }
+                            }
+                        }
+                        .card-footer{
+                            display: flex;
                         }
                     }
                 }
+            }
+        }
+    }
+}
+
+// small devices
+@media (min-width:481px) and (max-width:767px){
+    .container{
+        width: 90%;
+        margin: auto;
+        .blog-posts{
+            // width: 100%;
+            // display: flex;
+            // flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, ifr));
+            gap: 1rem;
+            .card{
+                width: 100%;
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
             }
         }
     }
