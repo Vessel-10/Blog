@@ -265,21 +265,5 @@ img {
     display: flex;
   }
 }
-@media (min-width: 481px) and (max-width: 767px) {
-  .container {
-    width: 90%;
-    margin: auto;
-  }
-  .container .blog-posts {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, ifr));
-    gap: 1rem;
-  }
-  .container .blog-posts .card {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
 
 /*# sourceMappingURL=blog.css.map */
